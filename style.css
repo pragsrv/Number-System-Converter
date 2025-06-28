@@ -111,3 +111,46 @@ input[type="text"] {
 .theme-toggle button:hover {
   background: var(--border);
 }
+.details {
+  margin-top: 30px;
+  width: 90%;
+  max-width: 600px;
+}
+
+.steps-section, .history-section {
+  background: var(--input-bg);
+  color: var(--text-color);
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.steps-section h2,
+.history-section h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+#conversionSteps {
+  white-space: pre-wrap;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  min-height: 80px;
+}
+
+#historyList {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+#historyList li {
+  margin-bottom: 8px;
+  padding: 8px;
+  background: rgba(0,0,0,0.05);
+  border-radius: 6px;
+}
