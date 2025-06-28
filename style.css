@@ -1,45 +1,113 @@
+:root {
+  --bg-color: #f0f0f0;
+  --text-color: #000;
+  --input-bg: #fff;
+  --border: #ccc;
+  --error: #e74c3c;
+}
+
+body.dark {
+  --bg-color: #1e1e1e;
+  --text-color: #fff;
+  --input-bg: #2e2e2e;
+  --border: #444;
+  --error: #ff6b6b;
+}
+
 body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
   font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.theme-toggle {
+  align-self: flex-end;
+  margin-bottom: 10px;
+  font-size: 14px;
 }
 
 .container {
-  background: #fff;
+  background: var(--input-bg);
   padding: 25px 30px;
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  width: 300px;
+  width: 350px;
+  transition: background 0.3s;
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 20px;
-  font-size: 22px;
+  margin-bottom: 25px;
+  font-size: 24px;
 }
 
 .field {
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 
 label {
-  display: block;
-  margin-bottom: 5px;
   font-weight: bold;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
 }
 
 input[type="text"] {
-  width: 100%;
+  flex: 1;
   padding: 8px 10px;
   font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  border: 1px solid var(--border);
+  border-radius: 6px 0 0 6px;
+  background: var(--input-bg);
+  color: var(--text-color);
+  transition: border 0.2s;
 }
 
-input[type="text"]:invalid {
-  border-color: red;
+.copy-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 0 6px 6px 0;
+}
+
+.copy-btn:hover {
+  background-color: #45a049;
+}
+
+.error {
+  color: var(--error);
+  font-size: 12px;
+  height: 14px;
+  margin-top: 4px;
+}
+.theme-toggle {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+.theme-toggle button {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+.theme-toggle button:hover {
+  background: var(--border);
 }

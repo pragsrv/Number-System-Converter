@@ -1,35 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Number System Converter</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  
   <div class="container">
+    <div class="theme-toggle">
+  <button id="themeSwitcher" type="button">🌙</button>
+</div>
     <h1>Number System Converter</h1>
 
     <div class="field">
       <label for="binary">Binary</label>
-      <input type="text" id="binary" placeholder="Enter binary">
+      <div class="input-group">
+        <input type="text" id="binary" placeholder="Enter binary" />
+        <button class="copy-btn" data-copy="binary">📋</button>
+      </div>
+      <small class="error" id="error-binary"></small>
     </div>
 
     <div class="field">
       <label for="decimal">Decimal</label>
-      <input type="text" id="decimal" placeholder="Enter decimal">
+      <div class="input-group">
+        <input type="text" id="decimal" placeholder="Enter decimal" />
+        <button class="copy-btn" data-copy="decimal">📋</button>
+      </div>
+      <small class="error" id="error-decimal"></small>
     </div>
 
     <div class="field">
       <label for="octal">Octal</label>
-      <input type="text" id="octal" placeholder="Enter octal">
+      <div class="input-group">
+        <input type="text" id="octal" placeholder="Enter octal" />
+        <button class="copy-btn" data-copy="octal">📋</button>
+      </div>
+      <small class="error" id="error-octal"></small>
     </div>
 
     <div class="field">
       <label for="hexadecimal">Hexadecimal</label>
-      <input type="text" id="hexadecimal" placeholder="Enter hexadecimal">
+      <div class="input-group">
+        <input type="text" id="hexadecimal" placeholder="Enter hexadecimal" />
+        <button class="copy-btn" data-copy="hexadecimal">📋</button>
+      </div>
+      <small class="error" id="error-hexadecimal"></small>
     </div>
   </div>
+  
 
   <script src="script.js"></script>
 </body>
